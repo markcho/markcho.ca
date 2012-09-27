@@ -66,12 +66,15 @@ p {
   .nav a {
     float: left;
     font-size: 18px;
-    padding: 9px 31px;
+    padding: 9px 30px;
     color: #888888; }
+    .nav a:hover {
+      color: white;
+      text-decoration: none; }
   .nav .selected {
     color: white; }
   .nav .button_border {
-    border-left: 1px solid #222222; }
+    border-left: 3px solid #222222; }
 
 .fixed {
   border-top-left-radius: 0px;
