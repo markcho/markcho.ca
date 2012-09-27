@@ -1,0 +1,190 @@
+$page_width: 800px;
+$page_spacer: 20px;
+$page_primary_color: #FFFFFF;
+$page_secondary_color: #AAAAAA;
+$page_tertiary_color: #888888;
+
+$page_background: #222222;
+$content_background: #444444;
+
+$corner_radius: 20px;
+$picture_corner_radius: 10px;
+
+$info_height: 102px;
+$info_padding: 20px 30px 20px 30px;
+$info_text_left_margin: 132px;
+$info_name_size: 50px;
+
+$picture_dimension: 100px;
+$picture_border: 1px solid white;
+
+$nav_width: $page_width - 28 - 28;
+$nav_height: 40px;
+$nav_padding: 0px 28px;
+$nav_button_padding: 9px 31px;
+
+$content_padding: 20px 30px 20px 30px;
+$post_padding: 30px;
+$post_title_size: 30px;
+$post_body_padding: 0px 25px;
+
+
+@mixin round-corner-top($radius) {
+  border-top: {
+    left-radius: $radius;
+    right-radius: $radius;
+  }
+}
+
+@mixin round-corner-bottom($radius) {
+  border-bottom: {
+    left-radius: $radius;
+    right-radius: $radius;
+  }
+}
+
+@mixin vertical-spacer($height) {
+  margin-bottom: $height;
+}
+
+body {
+  background: $page_background;
+  color: $page_secondary_color;
+  font-family: 'Scada', sans-serif;
+  margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: $page_secondary_color;
+
+  &:visited {
+    color: $page_secondary_color;
+  }
+  &:hover {
+    color: $page_primary_color;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-top: 0px;
+}
+
+#main {
+  width: $page_width;
+  margin: 0 auto;
+}
+
+#info {
+  @include round-corner-bottom($corner_radius);
+  @include vertical-spacer($page_spacer);
+
+  background: $content_background;
+  padding: $info_padding;
+  height: $info_height;
+
+  #info_picture {
+    @include round-corner-top($picture_corner_radius);
+    @include round-corner-bottom($picture_corner_radius);
+
+    float: left;
+    border: $picture_border;
+    width: $picture_dimension;
+    height: $picture_dimension;
+
+    #profile_picture {
+      @include round-corner-top($picture_corner_radius);
+      @include round-corner-bottom($picture_corner_radius);
+    }
+  }
+
+  #info_text {
+    margin-left: $info_text_left_margin;
+
+    #name {
+      color: $page_primary_color;
+      font-size: $info_name_size;
+      font-weight: bold;
+    }
+
+    #email {
+      float: right;
+    }
+  }
+}
+
+.nav {
+  @include round-corner-top($corner_radius);
+  @include round-corner-bottom($corner_radius);
+
+  background: $content_background;
+  height: $nav_height;
+  padding: $nav_padding;
+  width: $nav_width;
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    float: left;
+    font-size: 18px;
+    padding: $nav_button_padding;
+    color: $page_tertiary_color;
+  }
+
+  .selected {
+    color: $page_primary_color;
+  }
+
+  .button_border {
+    border-left: 1px solid $page_background;
+  }
+}
+
+.fixed {
+  @include round-corner-top(0px);
+
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+}
+
+.spacer {
+  width: $page_width;
+  height: $page_spacer;
+}
+
+.fixed_spacer {
+  background: $page_background;
+  height: $nav_height + $page_spacer;
+  position: fixed;
+  top: 0px;
+}
+
+#content {
+  @include round-corner-top($corner_radius);
+  @include round-corner-bottom($corner_radius);
+  @include vertical-spacer($page_spacer);
+
+  background: $content_background;
+  padding: $content_padding;
+
+  .post {
+    padding-bottom: $post_padding;
+
+    .post_title {
+      color: $page_primary_color;
+      font-size: $post_title_size;
+      font-weight: bold;
+    }
+
+    .post_body {
+      padding: $post_body_padding;
+      text-align: justify;
+    }
+  }
+}

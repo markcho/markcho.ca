@@ -1,0 +1,109 @@
+body {
+  background: #222222;
+  color: #aaaaaa;
+  font-family: 'Scada', sans-serif;
+  margin-top: 0px; }
+
+a {
+  text-decoration: none;
+  color: #aaaaaa; }
+  a:visited {
+    color: #aaaaaa; }
+  a:hover {
+    color: white;
+    text-decoration: none; }
+
+p {
+  margin-top: 0px; }
+
+#main {
+  width: 800px;
+  margin: 0 auto; }
+
+#info {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  background: #444444;
+  padding: 20px 30px 20px 30px;
+  height: 102px; }
+  #info #info_picture {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float: left;
+    border: 1px solid white;
+    width: 100px;
+    height: 100px; }
+    #info #info_picture #profile_picture {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+  #info #info_text {
+    margin-left: 132px; }
+    #info #info_text #name {
+      color: white;
+      font-size: 50px;
+      font-weight: bold; }
+    #info #info_text #email {
+      float: right; }
+
+.nav {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #444444;
+  height: 40px;
+  padding: 0px 28px;
+  width: 744px; }
+  .nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; }
+  .nav a {
+    float: left;
+    font-size: 18px;
+    padding: 9px 31px;
+    color: #888888; }
+  .nav .selected {
+    color: white; }
+  .nav .button_border {
+    border-left: 1px solid #222222; }
+
+.fixed {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  position: fixed;
+  top: 0px;
+  z-index: 1; }
+
+.spacer {
+  width: 800px;
+  height: 20px; }
+
+.fixed_spacer {
+  background: #222222;
+  height: 60px;
+  position: fixed;
+  top: 0px; }
+
+#content {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  background: #444444;
+  padding: 20px 30px 20px 30px; }
+  #content .post {
+    padding-bottom: 30px; }
+    #content .post .post_title {
+      color: white;
+      font-size: 30px;
+      font-weight: bold; }
+    #content .post .post_body {
+      padding: 0px 25px;
+      text-align: justify; }
